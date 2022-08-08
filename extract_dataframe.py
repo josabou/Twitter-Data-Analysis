@@ -47,11 +47,11 @@ class TweetDfExtractor:
         return polarity, self.subjectivity
 
     def find_created_time(self)->list:
-       
+               
         return created_at
 
     def find_source(self)->list:
-        source = 
+        source = self.find_source
 
         return source
 
@@ -73,16 +73,21 @@ class TweetDfExtractor:
         return is_sensitive
 
     def find_favourite_count(self)->list:
+        favorite_count = find_favorite_count
+        return favorite_count
         
     
     def find_retweet_count(self)->list:
-        retweet_count = 
+        retweet_count = self.find_retweet_count
+        return retwee_count
 
     def find_hashtags(self)->list:
-        hashtags =
+        hashtags = self.find_hashtags
+        return hashtags
 
     def find_mentions(self)->list:
-        mentions = 
+        mentions =  self.find_mentions
+        return mentions
 
 
     def find_location(self)->list:
@@ -92,9 +97,6 @@ class TweetDfExtractor:
             location = ''
         
         return location
-
-    
-        
         
     def get_tweet_df(self, save=False)->pd.DataFrame:
         """required column to be generated you should be creative and add more features"""
@@ -103,6 +105,7 @@ class TweetDfExtractor:
             'original_author', 'followers_count','friends_count','possibly_sensitive', 'hashtags', 'user_mentions', 'place']
         
         created_at = self.find_created_time()
+        self.tweets_list["created_"]
         source = self.find_source()
         text = self.find_full_text()
         polarity, subjectivity = self.find_sentiments(text)
